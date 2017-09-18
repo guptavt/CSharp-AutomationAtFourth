@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8771E1FA-C951-46AE-A560-0B10199FB0C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FourthEngageCSharpAutomation</RootNamespace>
+    <AssemblyName>FourthEngageCSharpAutomation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GoogleChrome|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\GoogleChrome</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MobileAndroid|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\MobileAndroid</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MobileIOS|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <OutputPath>bin\MobileIOS</OutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'MozillaFirefox|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\MozillaFirefox</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="appium-dotnet-driver">
+      <HintPath>..\packages\Fourth.Automation.Framework.Mobile.1.1.0\lib\appium-dotnet-driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Fourth.Automation.Framework.Mobile.1.1.0\lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Fourth.Automation.Framework.Core">
+      <HintPath>..\packages\Fourth.Automation.Framework.Mobile.1.1.0\lib\Fourth.Automation.Framework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Fourth.Automation.Framework.Mobile">
+      <HintPath>..\packages\Fourth.Automation.Framework.Mobile.1.1.0\lib\Fourth.Automation.Framework.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Fourth.Automation.Framework.Mobile.1.1.0\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Fourth.Automation.Framework.Mobile.1.1.0\lib\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\packages\Fourth.Automation.Framework.Mobile.1.1.0\lib\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\OtherMenus\OtherMenus.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OtherMenus.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Profile\Profile.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Profile.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PageObjects\OtherMenus.cs" />
+    <Compile Include="PageObjects\ProfilePage.cs" />
+    <Compile Include="StepDefinitions\LoginA.cs" />
+    <Compile Include="StepDefinitions\OtherMenusSteps.cs" />
+    <Compile Include="StepDefinitions\ProfileSteps.cs" />
+    <Compile Include="Support\Hooks.cs" />
+    <Compile Include="PageObjects\LoginPage.cs" />
+    <Compile Include="PageObjects\MainPage.cs" />
+    <Compile Include="Features\Login\LoginA.feature.cs">
+      <DependentUpon>LoginA.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Logout\LogoutA.feature.cs">
+      <DependentUpon>LogoutA.feature</DependentUpon>
+    </Compile>
+    <Compile Include="StepDefinitions\LogoutA.cs" />
+    <Compile Include="PageObjects\SignOutModal.cs" />
+    <Compile Include="Features\ConnectedApps\ConnectedAppsA.feature.cs">
+      <DependentUpon>ConnectedAppsA.feature</DependentUpon>
+    </Compile>
+    <Compile Include="StepDefinitions\ConnectedAppsA.cs" />
+    <Compile Include="PageObjects\AllApplicationsModal.cs" />
+    <Compile Include="PageObjects\ESSConnectedApp.cs" />
+    <Compile Include="Features\Notifications\NotificationsA.feature.cs">
+      <DependentUpon>NotificationsA.feature</DependentUpon>
+    </Compile>
+    <Compile Include="StepDefinitions\NotificationsA.cs" />
+    <Compile Include="PageObjects\AddPostModal.cs" />
+    <Compile Include="PageObjects\MentionUserModal.cs" />
+    <Compile Include="PageObjects\NotificationsPage.cs" />
+    <Compile Include="StepDefinitions\Shared\Common.cs" />
+    <Compile Include="Features\Feed\FeedA.feature.cs">
+      <DependentUpon>FeedA.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PageObjects\FeedPage.cs" />
+    <Compile Include="StepDefinitions\Feed.cs" />
+    <Compile Include="Features\Message\Message.feature.cs">
+      <DependentUpon>Message.feature</DependentUpon>
+    </Compile>
+    <Compile Include="StepDefinitions\MessageA.cs" />
+    <Compile Include="PageObjects\MessagePage.cs" />
+    <Compile Include="Features\Groups\GroupsA.feature.cs">
+      <DependentUpon>GroupsA.feature</DependentUpon>
+    </Compile>
+    <Compile Include="StepDefinitions\GroupsA.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\OtherMenus\OtherMenus.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OtherMenus.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Profile\Profile.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Profile.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="App.config" />
+    <None Include="App.MobileAndroid.config" />
+    <None Include="App.GoogleChrome.config" />
+    <None Include="App.MobileIOS.config" />
+    <None Include="Features\Login\LoginA.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoginA.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Logout\LogoutA.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LogoutA.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\ConnectedApps\ConnectedAppsA.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ConnectedAppsA.feature.cs</LastGenOutput>
+    </None>
+    <None Include="App.MozillaFirefox.config" />
+    <None Include="Features\Notifications\NotificationsA.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NotificationsA.feature.cs</LastGenOutput>
+    </None>
+    <None Include="README.md" />
+    <None Include="CHANGELOG.md" />
+    <None Include="TODO.md" />
+    <None Include="Features\Feed\FeedA.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FeedA.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Message\Message.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Message.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Groups\GroupsA.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GroupsA.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\SlowMonkey.1.1.1\build\SlowMonkey.targets" Condition="Exists('..\packages\SlowMonkey.1.1.1\build\SlowMonkey.targets')" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.2.29\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.29\build\Selenium.Chrome.WebDriver.targets')" />
+</Project>

@@ -1,0 +1,30 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourthEngageCSharpAutomation", "FourthEngageCSharpAutomation.csproj", "{8771E1FA-C951-46AE-A560-0B10199FB0C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		GoogleChrome|Any CPU = GoogleChrome|Any CPU
+		MobileAndroid|Any CPU = MobileAndroid|Any CPU
+		MobileIOS|Any CPU = MobileIOS|Any CPU
+		TOAndroid|Any CPU = TOAndroid|Any CPU
+		MozillaFirefox|Any CPU = MozillaFirefox|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.GoogleChrome|Any CPU.ActiveCfg = GoogleChrome|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.GoogleChrome|Any CPU.Build.0 = GoogleChrome|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.MobileAndroid|Any CPU.ActiveCfg = MobileAndroid|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.MobileAndroid|Any CPU.Build.0 = MobileAndroid|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.MobileIOS|Any CPU.ActiveCfg = MobileIOS|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.MobileIOS|Any CPU.Build.0 = MobileIOS|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.MozillaFirefox|Any CPU.ActiveCfg = MozillaFirefox|Any CPU
+		{8771E1FA-C951-46AE-A560-0B10199FB0C6}.MozillaFirefox|Any CPU.Build.0 = MozillaFirefox|Any CPU
+	EndGlobalSection
+EndGlobal
